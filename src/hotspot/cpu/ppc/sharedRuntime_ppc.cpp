@@ -47,7 +47,9 @@
 #include "opto/runtime.hpp"
 #endif
 
-#include <alloca.h>
+#ifndef __FreeBSD__
+ #include <alloca.h>
+#endif
 
 #define __ masm->
 
